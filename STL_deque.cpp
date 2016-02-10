@@ -28,5 +28,26 @@ int main(void)
 	koishi.clear();						// Clear the deque
 	std::cout << (koishi.empty() ? "Empty" : "Not Empty") << std::endl;
 
+	// ====================================================================//
+
+	std::deque<char> *gigadelic = new std::deque<char>;
+
+	gigadelic -> push_front('d');		// d
+	gigadelic -> push_back('e');		// de
+	gigadelic -> push_front('a');		// ade
+	gigadelic -> push_front('g');		// gade
+	gigadelic -> push_front('i');		// igade
+	gigadelic -> push_front('g');		// gigade
+	gigadelic -> push_back('l');		// gigadel
+	gigadelic -> push_back('i');		// gigadeli
+	gigadelic -> push_back('c');		// gigadelic
+
+	std::deque<char>::reverse_iterator RITEREND = gigadelic -> rend();
+	for(std::deque<char>::reverse_iterator RITERPOS = gigadelic -> rbegin(); RITERPOS != RITEREND; ++RITERPOS)
+		std::cout << *RITERPOS;			// next reverse access by using reverse_iterator also requires ++
+	std::cout << std::endl;
+
+	gigadelic -> clear();
+
 	return 0;
 }
