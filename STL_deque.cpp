@@ -17,6 +17,9 @@ int main(void)
 	koishi.push_front('k');				// koish
 	koishi.push_back('i');				// koishi
 
+	//koishi.pop_front();				// oishi
+	//koishi.pop_back();				// oish
+
 	std::cout << (koishi.empty() ? "Empty" : "Not Empty") << std::endl;
 										// returns "Not Empty"
 	
@@ -41,6 +44,8 @@ int main(void)
 	gigadelic -> push_back('l');		// gigadel
 	gigadelic -> push_back('i');		// gigadeli
 	gigadelic -> push_back('c');		// gigadelic
+
+	std::cout << gigadelic -> size() << std::endl;
 
 	std::deque<char>::reverse_iterator RITEREND = gigadelic -> rend();
 	for(std::deque<char>::reverse_iterator RITERPOS = gigadelic -> rbegin(); RITERPOS != RITEREND; ++RITERPOS)
